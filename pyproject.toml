@@ -47,7 +47,7 @@ gh-autofollow = "gh_autofollow.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/NgoHuuLoc0612/gh-autofollow"
-Documentation = "https://github.com/NgoHuuLoc0612/gh-autofolloww#readme"
+Documentation = "https://github.com/NgoHuuLoc0612/gh-autofollow#readme"
 "Bug Tracker" = "https://github.com/NgoHuuLoc0612/gh-autofollow/issues"
 
 [tool.setuptools.packages.find]
