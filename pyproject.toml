@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gh-autofollow"
+version = "1.0.0"
+description = "GitHub auto-follow automation with batching, caching, and OS autostart"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "gh-autofollow contributors" }]
+requires-python = ">=3.9"
+keywords = ["github", "follow", "automation", "cli", "scheduler"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+]
+
+dependencies = [
+    "requests",
+    "urllib3",
+]
+
+[project.optional-dependencies]
+toml = ["tomli; python_version<'3.11'"]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "responses",
+    "freezegun",
+    "black",
+    "ruff",
+    "mypy",
+]
+
+[project.scripts]
+gh-autofollow = "gh_autofollow.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/NgoHuuLoc0612/gh-autofollow"
+Documentation = "https://github.com/NgoHuuLoc0612/gh-autofolloww#readme"
+"Bug Tracker" = "https://github.com/NgoHuuLoc0612/gh-autofollow/issues"
+
+[tool.setuptools.packages.find]
+include = ["gh_autofollow*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+select = ["E", "F", "W", "I", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.9"
+ignore_missing_imports = true
+strict = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
