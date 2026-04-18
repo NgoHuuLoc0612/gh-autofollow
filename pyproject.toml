@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gh-autofollow"
-version = "1.0.0"
+version = "1.0.1"
 description = "GitHub auto-follow automation with batching, caching, and OS autostart"
 readme = "README.md"
 license = { text = "MIT" }
