@@ -362,6 +362,10 @@ pytest tests/test_security.py -v
 
 ---
 
+If you find this useful, consider giving it a ⭐
+
+---
+
 ## License
 
 MIT — see [LICENSE](LICENSE) for details.
